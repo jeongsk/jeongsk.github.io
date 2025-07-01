@@ -1,57 +1,82 @@
 body {
-    font-family: 'Pretendard', sans-serif; /* Apply Pretendard font */
+    font-family: 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace; /* Hacker font */
     line-height: 1.6;
-    font-weight: 300; /* Light font weight for modern feel */
+    font-weight: 300;
     margin: 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #0D0D0D; /* Dark background */
+    color: #39FF14; /* Neon green text */
+    text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14; /* Neon glow effect */
 }
 
 h1 {
-    color: #333; /* Darker color for main title */
-    font-weight: 600; /* Bolder weight for emphasis */
+    color: #39FF14; /* Neon green */
+    font-weight: 700; /* Bolder */
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* More space */
+    text-transform: uppercase; /* Uppercase for a more "technical" feel */
+    letter-spacing: 2px; /* Add letter spacing */
+    text-shadow: 0 0 8px #39FF14, 0 0 12px #39FF14;
 }
 
 h2 {
-    color: #007bff; /* More vibrant blue */
-    border-bottom: 2px solid #007bff;
+    color: #00FFFF; /* Neon blue for section titles */
+    border-bottom: 1px solid #00FFFF; /* Neon blue border */
     padding-bottom: 10px;
-    margin-top: 40px; /* More space above sections */
+    margin-top: 50px;
     font-weight: 500;
+    text-shadow: 0 0 5px #00FFFF;
+    letter-spacing: 1px;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
-    margin-bottom: 30px; /* Space after each list */
+    margin-bottom: 40px;
 }
 
 li {
-    background-color: #fff;
-    margin-bottom: 8px;
-    padding: 12px 15px; /* Slightly more padding */
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    background-color: #1A1A1A; /* Slightly lighter dark background for list items */
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 0; /* Sharp corners for terminal feel */
+    border: 1px solid #333333; /* Darker border for separation */
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1); /* Subtle cyan glow */
 }
 
 li:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+    background-color: #2A2A2A; /* Lighter background on hover */
+    transform: none; /* Remove lift effect, focus on background change */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Enhanced cyan glow on hover */
 }
 
 li a {
     text-decoration: none;
-    color: #007bff;
+    color: #00FFFF; /* Neon blue for links */
     font-weight: 400;
-    display: block; /* Make the whole list item clickable */
+    display: block;
+    text-shadow: 0 0 3px #00FFFF;
 }
 
 li a:hover {
     text-decoration: underline;
+    color: #80FFFF; /* Lighter neon blue on hover */
+}
+
+/* Optional: Add a blinking cursor effect to the header for more "hacker" feel */
+h1::after {
+    content: '_';
+    animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
